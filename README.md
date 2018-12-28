@@ -1,0 +1,2 @@
+# SmiSyncSynchronizer
+SMI Batch Editor
