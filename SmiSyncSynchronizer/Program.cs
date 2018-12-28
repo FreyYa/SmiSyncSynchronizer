@@ -27,7 +27,7 @@ namespace FreyYa.SmiSyncSynchronizer
 			//TODO : 지원 목록을 늘리고 싶은 경우, 이 항목에 꼭 추가해주어야 함
 			Subtitles.Types = new Dictionary<string, SubtitlesType>();
 			Subtitles.Types.Add(".SMI", SubtitlesType.SMI);
-			Subtitles.Types.Add(".SRT", SubtitlesType.SRT);
+			//Subtitles.Types.Add(".SRT", SubtitlesType.SRT);
 
 
 			MainWindow = new Forms.MainWindow();
