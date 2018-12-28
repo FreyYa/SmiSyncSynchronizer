@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmiSyncSynchronizer", "SmiSyncSynchronizer\SmiSyncSynchronizer.csproj", "{34FDEA08-B7CF-4032-8830-6993D46962F4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreyYa.SmiSyncSynchronizer", "SmiSyncSynchronizer\FreyYa.SmiSyncSynchronizer.csproj", "{34FDEA08-B7CF-4032-8830-6993D46962F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +18,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6DDC179C-A2B1-4640-8D0D-212D4806298A}
 	EndGlobalSection
 EndGlobal

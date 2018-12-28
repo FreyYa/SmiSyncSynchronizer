@@ -117,26 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Button_FileOpen" xml:space="preserve">
-    <value>파일 열기(&amp;O)</value>
-  </data>
-  <data name="Button_FileRemove" xml:space="preserve">
-    <value>파일 제외(&amp;D)</value>
-  </data>
-  <data name="Column_DirPath" xml:space="preserve">
-    <value>파일 경로</value>
-  </data>
-  <data name="Column_FileName" xml:space="preserve">
-    <value>파일 이름</value>
-  </data>
-  <data name="Column_FileType" xml:space="preserve">
-    <value>종류</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Icon_App" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\App.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Title_OpenFile" xml:space="preserve">
-    <value>자막 파일 열기</value>
-  </data>
 </root>
