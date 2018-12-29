@@ -46,6 +46,8 @@ namespace FreyYa.SmiSyncSynchronizer.RawModels
 		/// </summary>
 		public SubtitlesType Type { get; private set; }
 
+		public bool IsAvailable { get; private set; }
+
 		public Subtitles(string fullPath)
 		{
 			this.FullPath = fullPath;

@@ -16,6 +16,8 @@ namespace FreyYa.SmiSyncSynchronizer.Forms
 {
 	public partial class MainWindow : Form
 	{
+		public Dictionary<string, SAMI> SAMI_SubList { get; private set; }
+		public Dictionary<string, SRT> SRT_SubList { get; private set; }
 		public Dictionary<string, Subtitles> SubList { get; private set; }
 
 		public MainWindow()
@@ -25,6 +27,9 @@ namespace FreyYa.SmiSyncSynchronizer.Forms
 			#region Initialize
 
 			SubList = new Dictionary<string, Subtitles>();
+			SAMI_SubList = new Dictionary<string, SAMI>();
+			SRT_SubList = new Dictionary<string, SRT>();
+
 			this.Icon = Properties.Resources.Icon_App;
 			this.Text = Program.ProductInfo.Description;
 
@@ -34,10 +39,21 @@ namespace FreyYa.SmiSyncSynchronizer.Forms
 
 			this.btn_OpenFile.Text = Properties.Resources.Button_FileOpen;
 			this.btn_removeFile.Text = Properties.Resources.Button_FileRemove;
+			this.btn_Convert.Text = Properties.Resources.Button_DoConvert;
 
 			this.Column_FileName.Text = Properties.Resources.Column_FileName;
 			this.Column_DirPath.Text = Properties.Resources.Column_DirPath;
 			this.Column_FileType.Text = Properties.Resources.Column_FileType;
+
+			#endregion
+
+			#region DEBUG
+
+#if DEBUG
+			this.btn_ENGTest.Visible = true;
+#else
+			this.btn_ENGTest.Visible = false;
+#endif
 
 			#endregion
 		}
@@ -71,10 +87,30 @@ namespace FreyYa.SmiSyncSynchronizer.Forms
 				{
 					var target = new Subtitles(file);
 
-					if (target.Type != SubtitlesType.Etc && !SubList.ContainsKey(target.FullPath))
+					switch (target.Type)
 					{
-						SubList.Add(target.FullPath, target);
-						this.listView_fileList.Items.Add(new ListViewItem(target.ToArray()));
+						case SubtitlesType.SMI:
+							if (!SubList.ContainsKey(target.FullPath))
+							{
+								SAMI_SubList.Add(target.FullPath, new SAMI(target.FullPath));
+								this.listView_fileList.Items.Add(new ListViewItem(target.ToArray()));
+							}
+							break;
+						//case SubtitlesType.SRT:
+						//	if (!SubList.ContainsKey(target.FullPath))
+						//	{
+						//		SRT_SubList.Add(target.FullPath, (SRT)target);
+						//		this.listView_fileList.Items.Add(new ListViewItem(target.ToArray()));
+						//	}
+						//	break;
+						default:
+						case SubtitlesType.Etc:
+							if (!SubList.ContainsKey(target.FullPath))
+							{
+								SubList.Add(target.FullPath, target);
+								this.listView_fileList.Items.Add(new ListViewItem(target.ToArray()));
+							}
+							break;
 					}
 				}
 			}
@@ -95,6 +131,16 @@ namespace FreyYa.SmiSyncSynchronizer.Forms
 		}
 
 		private void listView_fileList_SelectedIndexChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void btn_ENGTest_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void btn_Convert_Click(object sender, EventArgs e)
 		{
 
 		}

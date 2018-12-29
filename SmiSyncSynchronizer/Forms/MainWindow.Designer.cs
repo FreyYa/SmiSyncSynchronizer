@@ -34,6 +34,8 @@
 			this.Column_FileType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.btn_OpenFile = new System.Windows.Forms.Button();
 			this.btn_removeFile = new System.Windows.Forms.Button();
+			this.btn_ENGTest = new System.Windows.Forms.Button();
+			this.btn_Convert = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// listView_fileList
@@ -87,11 +89,33 @@
 			this.btn_removeFile.UseVisualStyleBackColor = true;
 			this.btn_removeFile.Click += new System.EventHandler(this.btn_removeFile_Click);
 			// 
+			// btn_ENGTest
+			// 
+			this.btn_ENGTest.Location = new System.Drawing.Point(658, 335);
+			this.btn_ENGTest.Name = "btn_ENGTest";
+			this.btn_ENGTest.Size = new System.Drawing.Size(112, 23);
+			this.btn_ENGTest.TabIndex = 3;
+			this.btn_ENGTest.Text = "TEST";
+			this.btn_ENGTest.UseVisualStyleBackColor = true;
+			this.btn_ENGTest.Click += new System.EventHandler(this.btn_ENGTest_Click);
+			// 
+			// btn_Convert
+			// 
+			this.btn_Convert.Location = new System.Drawing.Point(12, 382);
+			this.btn_Convert.Name = "btn_Convert";
+			this.btn_Convert.Size = new System.Drawing.Size(118, 40);
+			this.btn_Convert.TabIndex = 4;
+			this.btn_Convert.Text = "btn_convert";
+			this.btn_Convert.UseVisualStyleBackColor = true;
+			this.btn_Convert.Click += new System.EventHandler(this.btn_Convert_Click);
+			// 
 			// MainWindow
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1018, 434);
+			this.Controls.Add(this.btn_Convert);
+			this.Controls.Add(this.btn_ENGTest);
 			this.Controls.Add(this.btn_removeFile);
 			this.Controls.Add(this.btn_OpenFile);
 			this.Controls.Add(this.listView_fileList);
@@ -112,5 +136,7 @@
 		private System.Windows.Forms.ColumnHeader Column_DirPath;
 		private System.Windows.Forms.ColumnHeader Column_FileType;
 		private System.Windows.Forms.Button btn_removeFile;
+		private System.Windows.Forms.Button btn_ENGTest;
+		private System.Windows.Forms.Button btn_Convert;
 	}
 }
